@@ -8,12 +8,13 @@ import MemoryTodoService from "@/data/todo/service/MemoryTodoService";
 
 const TodoStateContext = createContext({} as TodoState)
 const TodoStateManagerContext = createContext({} as TodoStateManager)
+const service = new MemoryTodoService()
+
 
 const TodoContextProvider = ({children}: {
   children: React.ReactNode;
 }) => {
   const [state, dispatch] = useReducer(TodoReducer, DefaultTodoState)
-  const service = new MemoryTodoService()
   const todoStateManager = new TodoStateManager(service, dispatch)
 
   return <>
