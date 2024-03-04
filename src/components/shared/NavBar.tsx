@@ -16,7 +16,7 @@ export default function NavBar() {
   return <>
     <div className={"border-b"}>
       <div className={"flex h-16 px-4 items-center"}>
-        <Image src={"https://help.kagi.com/assets/doggo_1.b29ed36f.png"} className={"inline-flex h-16"} alt={"kagi logo"} />
+        <img src={"https://help.kagi.com/assets/doggo_1.b29ed36f.png"} className={"inline-flex h-16"} alt={"kagi logo"} />
         <NavigationMenu className={"px-4"}>
           <NavigationMenuList className={"space-x-4 lg:space-x-6"}>
             <NavigationMenuItem className={pathname === "/" ? "" : "text-muted-foreground"}>
